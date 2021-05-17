@@ -29,9 +29,11 @@
 </script>
 
 <Anchor url={ambition.url} newTab>
-	<!-- <Box css={{ position: 'absolute', surrounding: '-4px' }}>
-		<Hexagon />
-	</Box> -->
+	<Box
+		css={{ position: 'absolute', top: '-17%', left: '-6%', right: '-14%', bottom: '-18%' }}
+	>
+		<Hexagon fill="transparent" />
+	</Box>
 	<Box css={cssBox}>
 		<Image src={ambitionLogo} alt="Ambition Hexagonal Logo" css={cssImg} />
 		<Image
@@ -40,6 +42,5 @@
 			css={cssImg}
 			id="amb-hex-log-hov"
 		/>
-
 	</Box>
 </Anchor>
