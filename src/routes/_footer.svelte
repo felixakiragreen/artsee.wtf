@@ -7,7 +7,6 @@
 	const ss = stitch({
 		display: 'flex',
 		flexDirection: 'column',
-		// fontFamily: '$main',
 		pt: '$8',
 		sy: '$8',
 	})
