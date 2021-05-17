@@ -14,5 +14,9 @@
 	"ambition": {
 		"url": "https://ambition.wtf",
 		"username": "ambition.wtf"
+	},
+	"chrome": {
+		"url": "https://chrome.google.com/webstore/detail/artsee/akbgmbhnmpmacgkdkjafjeibneefikkp",
+		"username": "artsee"
 	}
 }
