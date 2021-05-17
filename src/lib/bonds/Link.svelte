@@ -11,6 +11,9 @@
 	const ss = stitch({
 		variants: {
 			appearance: {
+				none: {
+					textDecoration: 'none',
+				},
 				blocky: {
 					// text: '$lg',
 					// fontWeight: '$bold',
