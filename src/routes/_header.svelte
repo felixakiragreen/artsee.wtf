@@ -17,8 +17,8 @@
 
 <header class={ss()}>
 	<Content>
-		<Inline css={{ justifyContent: 'space-between' }}>
-			<Box css={{ position: 'relative', size: '$12', '> *': { size: '$12' } }}>
+		<Inline css={{ justifyContent: 'space-between' }} alignV="center">
+			<Box css={{ position: 'relative', size: '$10' }}>
 				<Ambition />
 			</Box>
 			<Socials space="no" />
