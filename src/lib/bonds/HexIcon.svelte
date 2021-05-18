@@ -13,9 +13,11 @@
 	const ss = stitch({
 		'--hex-bg': 'var(--base-hex-bg)',
 		'--fill': 'var(--base-fill)',
+		'--hover': 'false',
 		'&:hover': {
 			'--hex-bg': 'var(--hover-hex-bg)',
 			'--fill': 'var(--hover-fill)',
+			'--hover': 'true',
 		},
 		color: 'var(--hex-bg)',
 		transition: '$1',
@@ -29,12 +31,12 @@
 	newTab
 	cls={ss}
 	style="
-		--base-hex-bg: var(--colors-{color}400);
+		--base-hex-bg: transparent;
 		--base-fill: var(--colors-grey700);
-		--hover-hex-bg: var(--colors-{color}700);
+		--hover-hex-bg: var(--colors-{color}400);
 		--hover-fill: var(--colors-grey200);
 	">
-	<Hexagon fill="currentcolor">
+	<Hexagon fill="currentcolor" >
 		<g
 			transform={`translate(${transform.translate.x},${transform.translate.y}) scale(${transform.scale})`}
 		>
