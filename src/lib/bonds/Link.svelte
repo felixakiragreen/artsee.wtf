@@ -6,7 +6,7 @@
 	export let newTab = false
 
 	export let css = null
-	export let appearance = 'blocky'
+	export let appearance = 'blockinho'
 
 	const ss = stitch({
 		variants: {
@@ -14,8 +14,9 @@
 				blocky: {
 					// text: '$lg',
 					// fontWeight: '$bold',
-					color: '$highlight',
+					color: '$foreground',
 					textDecoration: 'none',
+					borderBottom: '2px solid $foreground',
 					display: 'inline-block',
 					// transition: '$1',
 
@@ -29,7 +30,7 @@
 					'&:hover': {
 						// backgroundColor: '$felixgreen',
 						// color: '$indigo',
-						color: '$background',
+						// color: '$background',
 						cursor: 'pointer',
 
 						'& span': {
@@ -40,21 +41,26 @@
 					},
 				},
 				blockinho: {
-					color: '$highlight',
+					// color: '$highlight',
+					// textDecoration: 'underline',
+					color: '$foreground',
 					textDecoration: 'none',
 					display: 'inline-block',
+					borderBottom: '1px solid $foreground',
 					// transition: '$1',
 
 					'& span': {
 						display: 'inline-block',
 						transition: '$1',
+
 						// py: '$1',
 						// my: '$-1',
 					},
 
 					'&:hover': {
-						color: '$background',
+						// color: '$background',
 						cursor: 'pointer',
+						borderBottom: '1px solid transparent',
 
 						'& span': {
 							backgroundColor: '$highlight',
@@ -63,7 +69,6 @@
 						},
 					},
 				},
-
 			},
 			// textTransform: {
 			// 	initial: {
@@ -76,7 +81,7 @@
 		},
 
 		defaultVariants: {
-			appearance: 'blocky',
+			appearance: 'blockinho',
 		},
 	})
 </script>
