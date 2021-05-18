@@ -10,6 +10,6 @@
 	const ss = cls || stitch({})
 </script>
 
-<div class={ss({ ...vrt, css })} {style} {id}>
+<button class={ss({ ...vrt, css })} {style} {id}>
 	<slot />
-</div>
+</button>

@@ -1,5 +1,9 @@
-<script>
+<script lang="ts">
 	import { stitch } from '@/ui'
+
+	export let url
+	export let newTab = false
+	let target = newTab ? '_blank' : '_self'
 
 	export let cls = null
 	export let css = null
@@ -10,6 +14,6 @@
 	const ss = cls || stitch({})
 </script>
 
-<div class={ss({ ...vrt, css })} {style} {id}>
+<a href={url} {target} class={ss({ ...vrt, css })} {style} {id}>
 	<slot />
-</div>
+</a>

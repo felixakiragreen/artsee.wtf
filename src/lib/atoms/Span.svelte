@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { stitch } from '@/ui'
 
 	export let cls = null
@@ -10,6 +10,6 @@
 	const ss = cls || stitch({})
 </script>
 
-<div class={ss({ ...vrt, css })} {style} {id}>
+<span class={ss({ ...vrt, css })} {style} {id}>
 	<slot />
-</div>
+</span>
