@@ -6,15 +6,17 @@
 	import Link from '@/lib/bonds/Link.svelte'
 	import AddToChrome from '@/lib/comps/AddToChrome.svelte'
 
-	import ImgArtseeFullLogo from '@/assets/artsee-full-logo.svg'
+	import { ambition } from '@/lib/datum/socials'
+
+	import ImgArtseeFullLogo from '@/assets/artsee_full_logo.svg'
 </script>
 
-<Stack>
-	<Image src={ImgArtseeFullLogo} />
+<Stack space="md" align="center" css={{ py: '$24' }}>
+	<Image src={ImgArtseeFullLogo} css={{ w: '$96' }} />
 	<Text>bring NFTs into your daily life</Text>
-	<Text>
+	<Text css={{ text: '$xs' }}>
 		a project by
-		<Link>ambition.wtf</Link>
+		<Link newTab url={ambition.url}>ambition.wtf</Link>
 	</Text>
 	<AddToChrome />
 	<Text css={{ text: '$sm' }}>support this project :)</Text>
