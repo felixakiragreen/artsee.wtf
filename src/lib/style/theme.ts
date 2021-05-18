@@ -9,10 +9,10 @@ const colors = {
 	gold: '#fab70e',
 	clear: 'hsla(0, 0%, 0%, 0)',
 	//
-	background: '$grey800',
-	foreground: '$white',
-	highlight: '$felixgreen',
-	lowlight: '$indigo',
+	background: '$grey100',
+	foreground: '$grey700',
+	highlight: '$gold',
+	// lowlight: '$indigo',
 	muted: '$grey500',
 	faint: '$grey200',
 
@@ -87,7 +87,7 @@ const colors = {
 const space = {
 	0: '0px', // 0px
 	px: '1px', // 1px
-	'0.5': '0.125rem', // 2px
+	'0_5': '0.125rem', // 2px
 	1: '0.25rem', // 4px
 	'1.5': '0.375rem', // 6px
 	2: '0.5rem', // 8px
