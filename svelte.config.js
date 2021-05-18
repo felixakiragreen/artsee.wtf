@@ -1,4 +1,5 @@
-import preprocess from 'svelte-preprocess';
+import preprocess from 'svelte-preprocess'
+import netlify from '@sveltejs/adapter-netlify'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -8,8 +9,31 @@ const config = {
 
 	kit: {
 		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte'
-	}
-};
+		target: '#svelte',
+		//
+		// adapter: node(),
+		adapter: netlify(),
+		//
+		vite: {
+			ssr: {
+				// TODO: this needs to be in prod, but not dev
+				// noExternal: ['lodash'],
+			},
+			resolve: {
+				// alias: [{ find: '@', replacement: '/src' }],
+				alias: {
+					'@': '/src',
+				},
+			},
+			// build: {
+			// 	outDir: 'build/',
+			// },
+			optimizeDeps: {
+				include: ['svelte-hero-icons', 'lodash'],
+				exclude: [],
+			},
+		},
+	},
+}
 
-export default config;
+export default config
