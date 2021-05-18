@@ -2,18 +2,20 @@
 	import { stitch } from '@/ui'
 
 	import Box from '@/lib/atoms/Box.svelte'
-	import Content from '@/lib/bonds/Content.svelte'
 
 	import Hero from '@/lib/comps/Hero.svelte'
+	import Features from '@/lib/comps/Features.svelte'
+	import Trailer from '@/lib/comps/Trailer.svelte'
 
 	const ss = stitch({
-		bg: '$grey200',
+		bg: '$background',
+		color: '$foreground',
 		fontFamily: '$main',
-		// position: 'relative',
-		// zIndex: 100,
 	})
 </script>
 
 <Box cls={ss}>
 	<Hero />
+	<Features />
+	<Trailer />
 </Box>
