@@ -11,6 +11,8 @@
 	fill-rule="evenodd"
 	clip-rule="evenodd"
 	stroke-line-join="round"
+	stroke-linecap="round"
+	stroke-linejoin="round"
 	stroke-miter-limit={2}
 >
 	<slot />
