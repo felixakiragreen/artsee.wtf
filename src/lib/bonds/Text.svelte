@@ -84,8 +84,8 @@
 				h5: {
 					text: '$xl',
 					fontWeight: '$bold',
-					mt: '$12',
-					mb: '$4',
+					// mt: '$12',
+					// mb: '$4',
 				},
 				h6: {
 					text: '$lg',
@@ -94,9 +94,9 @@
 				p: {
 					display: 'block',
 					py: '$2',
-					text: '$lg',
-					fontWeight: '$semi',
-					lineHeight: '$2xl',
+					// text: '$lg',
+					// fontWeight: '$semi',
+					lineHeight: '$lg',
 				},
 				a: {
 					text: '$lg',
