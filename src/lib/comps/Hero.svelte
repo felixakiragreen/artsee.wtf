@@ -9,6 +9,7 @@
 	import Text from '@/lib/bonds/Text.svelte'
 	import Hide from '@/lib/bonds/Hide.svelte'
 	import AddToChrome from '@/lib/comps/AddToChrome.svelte'
+	import SupportProject from './SupportProject.svelte'
 
 	import ImgArtseeTextLarge from '@/assets/artsee_text_large.svg'
 	import ImgArtseeGoldLogo from '@/assets/artsee_gold_logo.svg'
@@ -90,7 +91,7 @@
 					open a new tab
 				</Text>
 				<AddToChrome />
-				<Text css={{ text: '$sm' }}>support this project :)</Text>
+				<SupportProject />
 			</Stack>
 		</Inline>
 	</Content>

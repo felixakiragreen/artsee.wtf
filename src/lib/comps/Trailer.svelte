@@ -1,10 +1,10 @@
 <script lang="ts">
-	import Box from '@/lib/atoms/Box.svelte'
 	import Image from '@/lib/atoms/Image.svelte'
 	import Stack from '@/lib/bonds/Stack.svelte'
 	import Text from '@/lib/bonds/Text.svelte'
 	import Link from '@/lib/bonds/Link.svelte'
 	import AddToChrome from '@/lib/comps/AddToChrome.svelte'
+	import SupportProject from '@/lib/comps/SupportProject.svelte'
 
 	import { ambition } from '@/lib/datum/socials'
 
@@ -19,5 +19,5 @@
 		<Link newTab url={ambition.url}>ambition.wtf</Link>
 	</Text>
 	<AddToChrome />
-	<Text css={{ text: '$sm' }}>support this project :)</Text>
+	<SupportProject />
 </Stack>
