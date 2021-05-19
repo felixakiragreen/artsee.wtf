@@ -6,6 +6,7 @@
 	import Stack from '@/lib/bonds/Stack.svelte'
 	import Text from '@/lib/bonds/Text.svelte'
 	import Hide from '@/lib/bonds/Hide.svelte'
+	import Link from '@/lib/bonds/Link.svelte'
 	import Button from '@/lib/bonds/Button.svelte'
 	import AddToChrome from '@/lib/comps/AddToChrome.svelte'
 	import SupportProject from './SupportProject.svelte'
@@ -119,12 +120,14 @@
 			<AddToChrome />
 			<SupportProject />
 			<Hide below="md">
-				<Button
-					rounding="full"
-					css={{ position: 'absolute', bottom: '$12', size: '$16', fontWeight: '$base' }}
-				>
-					<Image src={IconArrow} css={{ position: 'relative', top: '$1' }} />
-				</Button>
+				<Link url="#next" appearance="clean">
+					<Button
+						rounding="full"
+						css={{ position: 'absolute', bottom: '$12', size: '$16', fontWeight: '$base' }}
+					>
+						<Image src={IconArrow} css={{ position: 'relative', top: '$1' }} />
+					</Button>
+				</Link>
 			</Hide>
 		</Stack>
 	</Box>

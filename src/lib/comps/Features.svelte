@@ -46,7 +46,7 @@
 	<Content>
 
 		<Stack css={{ py: '$32', sy: '$32' }}>
-			<Box css={cssInl}>
+			<Box css={cssInl} id="next">
 				<Stack css={{ p: '$16' }}>
 					<Text mdx="h5">displays your art in gallery & slideshow modes</Text>
 					<Text mdx="p">
