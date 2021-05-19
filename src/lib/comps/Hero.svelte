@@ -84,6 +84,7 @@
 			alignItems: 'center',
 			justifyContent: 'center',
 			textAlign: 'center',
+			px: '$1',
 		},
 		'@md': {
 			height: 'calc(100vh - 80px)',
@@ -108,7 +109,7 @@
 			<Image src={ImgArtseeGoldLogo} alt="artsee logo" />
 			<Text appearance="subtitle">artsee for chrome</Text>
 			<Text mdx="h5">bring NFTs into your daily life</Text>
-			<Text mdx="p" css={{ maxWidth: '$md' }}>
+			<Text mdx="p" css={{ maxWidth: '$md', px: '$1' }}>
 				artsee uses your
 				<Image
 					src={IconEth}

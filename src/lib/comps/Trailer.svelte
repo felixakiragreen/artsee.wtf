@@ -12,7 +12,7 @@
 </script>
 
 <Stack space="md" align="center" css={{ py: '$24' }}>
-	<Image src={ImgArtseeFullLogo} css={{ w: '$96' }} />
+	<Image src={ImgArtseeFullLogo} css={{ w: '$96', maxWidth: '90vw' }} />
 	<Text>bring NFTs into your daily life</Text>
 	<Text css={{ text: '$xs' }}>
 		a project by
