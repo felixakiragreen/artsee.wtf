@@ -9,6 +9,7 @@
 	export let css = null
 	export let size = null
 	export let mdx = null
+	export let appearance = null
 
 	const ss = stitch({
 		variants: {
@@ -127,20 +128,32 @@
 					fontWeight: '$semi',
 				},
 			},
+			appearance: {
+				subtitle: {
+					color: '$gold',
+					textTransform: 'uppercase',
+					fontWeight: '$semi',
+				},
+			},
 		},
 	})
 </script>
 
 {#if as.startsWith('h')}
-	<Heading cls={ss} vrt={{ size, mdx }} {css} h={parseInt(as.slice(-1))}>
+	<Heading
+		cls={ss}
+		vrt={{ size, mdx, appearance }}
+		{css}
+		h={parseInt(as.slice(-1))}
+	>
 		<slot />
 	</Heading>
 {:else if as === 'p'}
-	<Para cls={ss} vrt={{ size, mdx }} {css}>
+	<Para cls={ss} vrt={{ size, mdx, appearance }} {css}>
 		<slot />
 	</Para>
 {:else}
-	<Span cls={ss} vrt={{ size, mdx }} {css}>
+	<Span cls={ss} vrt={{ size, mdx, appearance }} {css}>
 		<slot />
 	</Span>
 {/if}
