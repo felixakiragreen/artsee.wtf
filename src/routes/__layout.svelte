@@ -18,7 +18,7 @@
 	<title>artsee.wtf</title>
 	<script
 		src="https://cdn.usefathom.com/script.js"
-		data-site=""
+		data-site="ZHMIRDXE"
 		data-excluded-domains="localhost"
 		defer>
 
