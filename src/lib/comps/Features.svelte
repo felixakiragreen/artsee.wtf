@@ -14,13 +14,17 @@
 	const cssInl = {
 		display: 'grid',
 		justifyItems: 'center',
+		'& img': {
+			width: '$full',
+		},
 
 		'@initial': {
-			gridTemplateRows: '1fr 1fr',
+			gridTemplateRows: '1fr auto',
 			justifyContent: 'center',
 			alignItems: 'end',
 			justifyItems: 'center',
 			'& img': {
+				px: '$12',
 				gridRow: '1',
 			},
 		},
@@ -30,6 +34,8 @@
 			alignItems: 'center',
 			justifyContent: 'center',
 			'& img': {
+				px: '$0',
+				py: '$12',
 				gridColumn: '2',
 			},
 		},
@@ -40,7 +46,7 @@
 
 	<Content>
 
-		<Stack>
+		<Stack css={{ py: '$16' }}>
 			<Box css={cssInl}>
 				<Stack css={{ p: '$16' }}>
 					<Text mdx="h5">displays your art in gallery & slideshow modes</Text>
@@ -48,11 +54,7 @@
 						see your art in all its glory every time you open a new tab
 					</Text>
 				</Stack>
-				<Image
-					src={ImgFeatureModes}
-					alt="graphic for various modes"
-					css={{ size: '$56' }}
-				/>
+				<Image src={ImgFeatureModes} alt="graphic for various modes" />
 			</Box>
 
 			<Box css={cssInl}>
@@ -66,11 +68,7 @@
 						window
 					</Text>
 				</Stack>
-				<Image
-					src={ImgFeatureFileTypes}
-					alt="graphic for various filetypes"
-					css={{ size: '$56' }}
-				/>
+				<Image src={ImgFeatureFileTypes} alt="graphic for various filetypes" />
 			</Box>
 
 			<Box css={cssInl}>
@@ -82,11 +80,7 @@
 						tab open on fullscreen mode
 					</Text>
 				</Stack>
-				<Image
-					src={ImgFeatureFrame}
-					alt="graphic for digital frame"
-					css={{ size: '$56' }}
-				/>
+				<Image src={ImgFeatureFrame} alt="graphic for digital frame" />
 			</Box>
 
 			<Box css={cssInl}>
@@ -97,11 +91,7 @@
 						doesn’t collect any user data
 					</Text>
 				</Stack>
-				<Image
-					src={ImgFeatureNoLogin}
-					alt="graphic for no login"
-					css={{ size: '$56' }}
-				/>
+				<Image src={ImgFeatureNoLogin} alt="graphic for no login" />
 			</Box>
 		</Stack>
 	</Content>
