@@ -34,8 +34,7 @@
 			alignItems: 'center',
 			justifyContent: 'center',
 			'& img': {
-				px: '$0',
-				py: '$12',
+				p: '$12',
 				gridColumn: '2',
 			},
 		},
@@ -46,7 +45,7 @@
 
 	<Content>
 
-		<Stack css={{ py: '$16' }}>
+		<Stack css={{ py: '$32', sy: '$32' }}>
 			<Box css={cssInl}>
 				<Stack css={{ p: '$16' }}>
 					<Text mdx="h5">displays your art in gallery & slideshow modes</Text>
