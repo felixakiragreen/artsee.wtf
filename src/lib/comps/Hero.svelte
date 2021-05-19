@@ -1,13 +1,12 @@
 <script lang="ts">
 	import { stitch } from '@/ui'
 
-	import Content from '@/lib/bonds/Content.svelte'
 	import Box from '@/lib/atoms/Box.svelte'
 	import Image from '@/lib/atoms/Image.svelte'
-	import Inline from '@/lib/bonds/Inline.svelte'
 	import Stack from '@/lib/bonds/Stack.svelte'
 	import Text from '@/lib/bonds/Text.svelte'
 	import Hide from '@/lib/bonds/Hide.svelte'
+	import Button from '@/lib/bonds/Button.svelte'
 	import AddToChrome from '@/lib/comps/AddToChrome.svelte'
 	import SupportProject from './SupportProject.svelte'
 
@@ -18,18 +17,48 @@
 	const ss = stitch({
 		bg: '$grey200',
 		fontFamily: '$main',
-		// py: '$12',
+		'@initial': {
+			height: 'auto',
+		},
+		'@md': {
+			minHeight: 'calc(100vh - 80px)',
+			overflow: 'hidden',
+		},
 	})
 
-	const ss1 = stitch({
+	const ssBox = stitch({
+		display: 'grid',
+		height: '$full',
+
+		'@initial': {
+			gridTemplateColumns: '1fr',
+		},
+		'@md': {
+			gridGap: '$4',
+			gridTemplateColumns: '1fr 400px',
+			pr: '$12',
+		},
+		'@lg': {
+			gridGap: '$12',
+			gridTemplateColumns: '1fr 500px',
+		},
+		'@xl': {
+			gridGap: '$24',
+		},
+	})
+
+	const ssArtSee = stitch({
 		// width: '50%',
+		// bg: '$red400',
 		position: 'relative',
-		left: '$-12',
-		// top: '$-12',
-		// bottom: '$-12',
+		right: '$12',
+		top: '$-2',
+		// bottom: '$12',
 		height: '$full',
 		display: 'flex',
 		alignItems: 'center',
+		justifyContent: 'center',
+
 		// my: '$-12',
 
 		// '@initial': {
@@ -46,49 +75,53 @@
 		// },
 	})
 
-	const cssHero = {
+	const cssContent = {
 		py: '$12',
-		pr: '$12',
+		// pr: '$12',
 		'@initial': {
 			alignItems: 'center',
 			justifyContent: 'center',
 			textAlign: 'center',
 		},
 		'@md': {
-			minWidth: '$sm',
+			height: 'calc(100vh - 80px)',
+			// width: '$sm',
 			alignItems: 'start',
 			textAlign: 'left',
 		},
 		'@lg': {
-			minWidth: '$lg',
+			// width: '$lg',
 		},
 	}
 </script>
 
 <Box cls={ss}>
-	<Content>
-		<Inline align="center">
+	<Box cls={ssBox}>
+		<Hide below="md">
+			<Box cls={ssArtSee}>
+				<Image src={ImgArtseeTextLarge} css={{ size: '$full' }} />
+			</Box>
+		</Hide>
+		<Stack align="leading" space="md" css={cssContent}>
+			<Image src={ImgArtseeGoldLogo} alt="artsee logo" />
+			<Text appearance="subtitle">artsee for chrome</Text>
+			<Text mdx="h5">bring NFTs into your daily life</Text>
+			<Text mdx="p" css={{ maxWidth: '$md' }}>
+				artsee uses your
+				<Image
+					src={IconEth}
+					css={{ position: 'relative', top: '$1', left: '$0_5' }}
+				/>
+				Ethereum wallet to display art from your collection every time you open
+				a new tab
+			</Text>
+			<AddToChrome />
+			<SupportProject />
 			<Hide below="md">
-				<Box cls={ss1}>
-					<Image src={ImgArtseeTextLarge} css={{ width: '$full' }} />
-				</Box>
+				<Button rounding="full" css={{ position: 'absolute', bottom: '$12' }}>
+					↓
+				</Button>
 			</Hide>
-			<Stack align="leading" space="md" css={cssHero}>
-				<Image src={ImgArtseeGoldLogo} alt="artsee logo" />
-				<Text appearance="subtitle">artsee for chrome</Text>
-				<Text mdx="h5">bring NFTs into your daily life</Text>
-				<Text mdx="p" css={{ maxWidth: '$md' }}>
-					artsee uses your
-					<Image
-						src={IconEth}
-						css={{ position: 'relative', top: '$1', left: '$0_5' }}
-					/>
-					Ethereum wallet to display art from your collection every time you
-					open a new tab
-				</Text>
-				<AddToChrome />
-				<SupportProject />
-			</Stack>
-		</Inline>
-	</Content>
+		</Stack>
+	</Box>
 </Box>
