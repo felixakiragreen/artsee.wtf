@@ -36,8 +36,6 @@
 	}
 </script>
 
-<!-- prettier-ignore -->
-
 <Box>
 
 	<Content>
@@ -45,10 +43,7 @@
 		<Stack>
 			<Box css={cssInl}>
 				<Stack css={{ p: '$16' }}>
-					<Text mdx="h5">
-						displays your art in gallery, <s>fullscreen</s>,
-						& slideshow modes
-					</Text>
+					<Text mdx="h5">displays your art in gallery & slideshow modes</Text>
 					<Text mdx="p">
 						see your art in all its glory every time you open a new tab
 					</Text>
@@ -80,11 +75,7 @@
 
 			<Box css={cssInl}>
 				<Stack css={{ p: '$16' }}>
-					<Text
-						css={{ color: '$gold', textTransform: 'uppercase', fontWeight: '$semi' }}
-					>
-						coming soon
-					</Text>
+					<Text appearance="subtitle">coming soon</Text>
 					<Text mdx="h5">turns your device into a digital frame</Text>
 					<Text mdx="p">
 						turn any device with Chrome into a digital frame by leaving a new

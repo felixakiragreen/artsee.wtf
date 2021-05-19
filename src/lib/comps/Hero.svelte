@@ -75,11 +75,7 @@
 			</Hide>
 			<Stack align="leading" space="md" css={cssHero}>
 				<Image src={ImgArtseeGoldLogo} alt="artsee logo" />
-				<Text
-					css={{ color: '$gold', textTransform: 'uppercase', fontWeight: '$semi' }}
-				>
-					artsee for chrome
-				</Text>
+				<Text appearance="subtitle">artsee for chrome</Text>
 				<Text mdx="h5">bring NFTs into your daily life</Text>
 				<Text mdx="p" css={{ maxWidth: '$md' }}>
 					artsee uses your
