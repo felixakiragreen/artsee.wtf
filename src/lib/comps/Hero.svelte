@@ -13,6 +13,7 @@
 	import ImgArtseeTextLarge from '@/assets/artsee_text_large.svg'
 	import ImgArtseeGoldLogo from '@/assets/artsee_gold_logo.svg'
 	import IconEth from '@/assets/icon_ethereum.svg'
+	import IconArrow from '@/assets/icon_arrow.svg'
 
 	const ss = stitch({
 		bg: '$grey200',
@@ -118,8 +119,11 @@
 			<AddToChrome />
 			<SupportProject />
 			<Hide below="md">
-				<Button rounding="full" css={{ position: 'absolute', bottom: '$12' }}>
-					↓
+				<Button
+					rounding="full"
+					css={{ position: 'absolute', bottom: '$12', size: '$16', fontWeight: '$base' }}
+				>
+					<Image src={IconArrow} css={{ position: 'relative', top: '$1' }} />
 				</Button>
 			</Hide>
 		</Stack>
