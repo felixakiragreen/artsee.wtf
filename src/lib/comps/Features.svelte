@@ -6,10 +6,10 @@
 	import Text from '@/lib/bonds/Text.svelte'
 	import Image from '@/lib/atoms/Image.svelte'
 
-	import ImgFeatureModes from '@/assets/feature_modes.svg'
-	import ImgFeatureFileTypes from '@/assets/feature_filetypes.svg'
-	import ImgFeatureFrame from '@/assets/feature_frame.svg'
-	import ImgFeatureNoLogin from '@/assets/feature_nologin.svg'
+	import ImgFeatureModes from '@/assets/illustration_display.svg'
+	import ImgFeatureFileTypes from '@/assets/illustration_filetypes.svg'
+	import ImgFeatureFrame from '@/assets/illustration_digitalframe.svg'
+	import ImgFeatureNoLogin from '@/assets/illustration_login.svg'
 
 	const cssInl = {
 		display: 'grid',
@@ -36,6 +36,8 @@
 	}
 </script>
 
+<!-- prettier-ignore -->
+
 <Box>
 
 	<Content>
@@ -44,7 +46,8 @@
 			<Box css={cssInl}>
 				<Stack css={{ p: '$16' }}>
 					<Text mdx="h5">
-						displays your art in gallery, fullscreen, & slideshow modes
+						displays your art in gallery, <s>fullscreen</s>,
+						& slideshow modes
 					</Text>
 					<Text mdx="p">
 						see your art in all its glory every time you open a new tab
@@ -77,6 +80,11 @@
 
 			<Box css={cssInl}>
 				<Stack css={{ p: '$16' }}>
+					<Text
+						css={{ color: '$gold', textTransform: 'uppercase', fontWeight: '$semi' }}
+					>
+						coming soon
+					</Text>
 					<Text mdx="h5">turns your device into a digital frame</Text>
 					<Text mdx="p">
 						turn any device with Chrome into a digital frame by leaving a new
