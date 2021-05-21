@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { stitch } from '@/ui'
 	import { ambition } from '@/lib/datum/socials'
 
 	import Box from '../atoms/Box.svelte'
@@ -7,40 +8,47 @@
 	import Hexagon from '../bonds/Hexagon.svelte'
 
 	import ambitionLogo from '@/assets/ambition_sharp_flat_clean_empty.svg'
-	import ambitionLogoHover from '@/assets/ambition_sharp_flat_clean.svg'
 
-	const cssBox = {
+	export let css = null
+	export let size = 'md'
+
+	const iconSizes = {
+		sm: '$8',
+		md: '$12',
+		lg: '$16',
+		xl: '$20',
+		'2xl': '$24',
+	}
+
+	$: iconSize = iconSizes[size] || size
+
+	$: cssInl = { '> *': { size: iconSize } }
+
+	const ss = stitch({
+		display: 'block',
+		color: 'var(--fill)',
+		transition: '$3',
 		position: 'relative',
-		'#amb-hex-log-hov': {
-			opacity: 0,
-			transition: '$1',
-		},
+		'--fill': 'var(--base-fill)',
 		'&:hover': {
-			'#amb-hex-log-hov': {
-				opacity: 1,
-			},
+			'--fill': 'var(--hover-fill)',
 		},
-	}
-
-	const cssImg = {
-		position: 'absolute',
-		surrounding: 0,
-	}
+	})
 </script>
 
-<Anchor url={ambition.url} newTab>
-	<Box
-		css={{ position: 'absolute', top: '-17%', left: '-6%', right: '-14%', bottom: '-18%' }}
+<Box css={cssInl}>
+	<Anchor
+		url={ambition.url}
+		newTab
+		cls={ss}
+		{css}
+		style="--base-fill: transparent; --hover-fill: var(--colors-felixgreen);"
 	>
-		<Hexagon fill="transparent" />
-	</Box>
-	<Box css={cssBox}>
-		<Image src={ambitionLogo} alt="Ambition Hexagonal Logo" css={cssImg} />
+		<Hexagon fill="currentcolor" />
 		<Image
-			src={ambitionLogoHover}
+			src={ambitionLogo}
 			alt="Ambition Hexagonal Logo"
-			css={cssImg}
-			id="amb-hex-log-hov"
+			css={{ position: 'absolute', top: '8.5%', left: '6%', height: '83%' }}
 		/>
-	</Box>
-</Anchor>
+	</Anchor>
+</Box>
