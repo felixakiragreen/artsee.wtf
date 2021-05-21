@@ -36,7 +36,7 @@
 		--hover-hex-bg: var(--colors-{color}400);
 		--hover-fill: var(--colors-grey200);
 	">
-	<Hexagon fill="currentcolor" >
+	<Hexagon fill="currentcolor">
 		<g
 			transform={`translate(${transform.translate.x},${transform.translate.y}) scale(${transform.scale})`}
 		>
