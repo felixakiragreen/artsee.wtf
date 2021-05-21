@@ -5,9 +5,20 @@
 	import Text from '@/lib/bonds/Text.svelte'
 	import Link from '@/lib/bonds/Link.svelte'
 
+	export let css = null
+
 	const ss = stitch({
-		bg: '$grey200',
-		fontFamily: '$main',
+		position: 'absolute',
+		'@initial': {
+			w: '$screen-w',
+			px: '$4',
+			left: 0,
+			right: 0,
+		},
+		'@md': {
+			w: '$xl',
+			px: '$0',
+		},
 	})
 
 	let show = false
@@ -16,12 +27,12 @@
 	}
 </script>
 
-<Box css={{ position: 'relative' }}>
+<Box>
 	<div on:click={toggle}>
 		<Link css={{ text: '$sm' }}>support this project :)</Link>
 	</div>
 	{#if show}
-		<Box css={{ position: 'absolute', w: '$xl' }}>
+		<Box cls={ss} {css}>
 			<Text>just send Eth to artsee.eth 🙏</Text>
 			<br />
 			<Text css={{ text: '$xs' }}>
