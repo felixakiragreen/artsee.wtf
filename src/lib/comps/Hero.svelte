@@ -119,7 +119,11 @@
 				a new tab
 			</Text>
 			<AddToChrome />
-			<SupportProject />
+			<Box css={{ '@md': { position: 'relative' } }}>
+				<SupportProject
+					css={{ '@initial': { textAlign: 'center' }, '@md': { textAlign: 'left' } }}
+				/>
+			</Box>
 			<Hide below="md">
 				<Link url="#next" appearance="clean">
 					<Button

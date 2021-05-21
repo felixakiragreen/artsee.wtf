@@ -19,5 +19,5 @@
 		<Link newTab url={ambition.url}>ambition.wtf</Link>
 	</Text>
 	<AddToChrome />
-	<SupportProject />
+	<SupportProject css={{ textAlign: 'center', mx: 'auto' }} />
 </Stack>
