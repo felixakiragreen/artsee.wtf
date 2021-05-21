@@ -334,6 +334,7 @@ export const tokens = {
 	transitions: {
 		1: 'all cubic-bezier(0.4, 0, 0.2, 1) 150ms',
 		2: 'opacity cubic-bezier(0.4, 0, 0.2, 1) 150ms',
+		3: 'all cubic-bezier(0.4, 0, 0.2, 1) 350ms',
 	},
 }
 
