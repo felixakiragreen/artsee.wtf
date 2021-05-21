@@ -2,7 +2,9 @@
 	import { stitch } from '@/ui'
 
 	import Box from '@/lib/atoms/Box.svelte'
+	import Inline from '@/lib/bonds/Inline.svelte'
 	import Socials from '@/lib/comps/Socials.svelte'
+	import Ambition from '@/lib/comps/Ambition.svelte'
 
 	const ss = stitch({
 		display: 'flex',
@@ -13,7 +15,10 @@
 </script>
 
 <footer class={ss()}>
-	<Socials align="center" space="no" />
+	<Inline align="center">
+		<Ambition />
+		<Socials space="no" />
+	</Inline>
 
 	<Box css={{ bg: '$grey700', h: '$4' }} />
 </footer>
